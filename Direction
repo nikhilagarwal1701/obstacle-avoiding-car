@@ -1,9 +1,9 @@
 void moveStop(){
   
-  digitalWrite(RightMotorForward, LOW);
-  digitalWrite(LeftMotorForward, LOW);
-  digitalWrite(RightMotorBackward, LOW);
-  digitalWrite(LeftMotorBackward, LOW);
+  digitalWrite(RMF, LOW);
+  digitalWrite(LMF, LOW);
+  digitalWrite(RMB, LOW);
+  digitalWrite(LMB, LOW);
 }
 
 void moveForward(){
@@ -12,11 +12,11 @@ void moveForward(){
 
     goesForward=true;
     
-    digitalWrite(LeftMotorForward, HIGH);
-    digitalWrite(RightMotorForward, HIGH);
+    digitalWrite(LMF, HIGH);
+    digitalWrite(RMF, HIGH);
   
-    digitalWrite(LeftMotorBackward, LOW);
-    digitalWrite(RightMotorBackward, LOW); 
+    digitalWrite(LMB, LOW);
+    digitalWrite(RMB, LOW); 
   }
 }
 
@@ -24,29 +24,29 @@ void moveBackward(){
 
   goesForward=false;
 
-  digitalWrite(LeftMotorBackward, HIGH);
-  digitalWrite(RightMotorBackward, HIGH);
+  digitalWrite(LMB, HIGH);
+  digitalWrite(RMB, HIGH);
   
-  digitalWrite(LeftMotorForward, LOW);
-  digitalWrite(RightMotorForward, LOW);
+  digitalWrite(LMF, LOW);
+  digitalWrite(RMF, LOW);
   
 }
 
 void turnRight(){
 
-  digitalWrite(LeftMotorForward, HIGH);
-  digitalWrite(RightMotorBackward, HIGH);
+  digitalWrite(LMF, HIGH);
+  digitalWrite(RMB, HIGH);
   
-  digitalWrite(LeftMotorBackward, LOW);
-  digitalWrite(RightMotorForward, LOW);
+  digitalWrite(LMB, LOW);
+  digitalWrite(RMF, LOW);
   
   delay(500);
   
-  digitalWrite(LeftMotorForward, HIGH);
-  digitalWrite(RightMotorForward, HIGH);
+  digitalWrite(LMF, HIGH);
+  digitalWrite(RMF, HIGH);
   
-  digitalWrite(LeftMotorBackward, LOW);
-  digitalWrite(RightMotorBackward, LOW);
+  digitalWrite(LMB, LOW);
+  digitalWrite(RMB, LOW);
  
   
   
@@ -54,16 +54,16 @@ void turnRight(){
 
 void turnLeft(){
 
-  digitalWrite(LeftMotorBackward, HIGH);
-  digitalWrite(RightMotorForward, HIGH);
+  digitalWrite(LMB, HIGH);
+  digitalWrite(RMF, HIGH);
   
-  digitalWrite(LeftMotorForward, LOW);
-  digitalWrite(RightMotorBackward, LOW);
+  digitalWrite(LMF, LOW);
+  digitalWrite(RMB, LOW);
 
   delay(500);
   
-  digitalWrite(LeftMotorForward, HIGH);
-  digitalWrite(RightMotorForward, HIGH);
+  digitalWrite(LMF, HIGH);
+  digitalWrite(RMF, HIGH);
   
   digitalWrite(LMB, LOW);
   digitalWrite(RMB, LOW);
