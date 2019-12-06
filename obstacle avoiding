@@ -1,7 +1,7 @@
-const int LeftMotorForward = 6;
-const int LeftMotorBackward = 7;
-const int RightMotorForward = 5;
-const int RightMotorBackward = 4;
+const int LMF = 6;
+const int LMB = 7;
+const int RMF = 5;
+const int RMB = 4;
 
 boolean goesForward = false;
 int distance = 100;
@@ -12,10 +12,10 @@ Servo servo_motor;
 void setup()
 {
 
-  pinMode(RightMotorForward, OUTPUT);
-  pinMode(LeftMotorForward, OUTPUT);
-  pinMode(LeftMotorBackward, OUTPUT);
-  pinMode(RightMotorBackward, OUTPUT);
+  pinMode(RMF, OUTPUT);
+  pinMode(LMF, OUTPUT);
+  pinMode(LMB, OUTPUT);
+  pinMode(RMB, OUTPUT);
   
   servo_motor.attach(9); //our servo pin
 
